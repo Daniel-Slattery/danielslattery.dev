@@ -1,7 +1,6 @@
-## Portfolio
-This is a foundation for a personal portfolio site. Building site using Next JS framework
+## Portfolio Site
+This is a foundation for a personal portfolio site. Building site using [Next.js](https://nextjs.org/) framework
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
