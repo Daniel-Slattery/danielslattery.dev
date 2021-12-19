@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <Box
       position="fixed"
-      m={2}
+      p={2}
       as="nav"
       w="100%"
       css={{ backdropFilter: 'blur(10px)' }}
