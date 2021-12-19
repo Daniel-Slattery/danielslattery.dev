@@ -10,7 +10,7 @@ const Main = () => {
         <title>Daniel Slattery - Homepage</title>
       </Head>
       <Navbar  />
-      <Flex h={300} align="center" justify="center" bg="lightblue" m={100}>
+      <Flex h={400} align="center" justify="center" bg="lightblue" m={100}>
         <Heading>3D Content Place Holder</Heading>
       </Flex>
 
