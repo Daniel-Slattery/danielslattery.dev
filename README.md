@@ -1,5 +1,10 @@
 ## Portfolio Site
-This is a foundation for a personal portfolio site. Building site using [Next.js](https://nextjs.org/) framework
+Building a personal portfolio site.
+
+## Tech Stack
+- [Next.js](https://nextjs.org/)
+- Chakra UI
+- Three JS
 
 
 ## Getting Started

@@ -1,0 +1,63 @@
+import {
+  Container,
+  Box,
+  Link,
+  Stack,
+  Image,
+  Flex,
+  Heading,
+  Spacer
+} from '@chakra-ui/react'
+import Logo from './logo'
+import { IoLogoGithub } from 'react-icons/io5'
+
+const Navbar = props => {
+  const { path } = props
+
+  return (
+    <Box
+      position="fixed"
+      m={2}
+      as="nav"
+      w="100%"
+      css={{ backdropFilter: 'blur(10px)' }}
+      zIndex={1}
+      {...props}
+    >
+      <Flex>
+      <Spacer />
+        <Logo />
+        <Spacer />
+        <Stack
+          direction={{ base: 'column', md: 'row' }}
+          display={{ base: 'none', md: 'flex' }}
+          width={{ base: 'full', md: 'auto' }}
+          alignItems="center"
+          flexGrow={1}
+          mt={{ base: 4, md: 0 }}
+        >
+          <Link href="#" path={path}>
+            Projects
+          </Link>
+          <Link href="#" path={path}>
+            Posts
+          </Link>
+          <Link
+            _target="_blank"
+            href="https://github.com/Daniel-Slattery"
+            path={path}
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+            pl={2}
+          >
+            <IoLogoGithub />
+            Source
+          </Link>
+        </Stack>
+      </Flex>
+    </Box>
+  )
+}
+
+export default Navbar

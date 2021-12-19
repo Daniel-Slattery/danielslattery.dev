@@ -1,9 +1,19 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import { Container, Box, Heading } from '@chakra-ui/react'
 
 export default function Home() {
   return (
-   <div>Hello</div>
+    <Container>
+      <Box borderRadius="lg" bg="lightblue" p={3} mb={6} align="center">
+        Hello, I am a full stack developer
+      </Box>
+      <Box display={{md: 'flex'}}>
+        <Box flexGrow={1}>
+          <Heading as='h2' variant='page-title'>
+            Daniel Slattery
+          </Heading>
+          <p>Tech enthusiast ( Developer / Trader )</p>
+        </Box>
+      </Box>
+    </Container>
   )
 }
