@@ -1,19 +1,15 @@
 import {
-  Container,
   Box,
   Link,
   Stack,
-  Image,
   Flex,
-  Heading,
   Spacer
 } from '@chakra-ui/react'
 import Logo from './logo'
 import ThemeToggleButton from './theme-toggle-button'
 import { IoLogoGithub } from 'react-icons/io5'
 
-const Navbar = props => {
-  const { path } = props
+const Navbar = () => {
 
   return (
     <Box
@@ -23,7 +19,6 @@ const Navbar = props => {
       w="100%"
       css={{ backdropFilter: 'blur(10px)' }}
       zIndex={1}
-      {...props}
     >
       <Flex>
       <Spacer />
@@ -32,21 +27,22 @@ const Navbar = props => {
         <Stack
           direction={{ base: 'column', md: 'row' }}
           display={{ base: 'none', md: 'flex' }}
-          width={{ base: 'full', md: 'auto' }}
+          width={{ base: '50%', md: '50%' }}
           alignItems="center"
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <Link href="#" path={path}>
+          <Link href="#" >
             Projects
           </Link>
-          <Link href="#" path={path}>
+          <Spacer />
+          <Link href="#" >
             Posts
           </Link>
+          <Spacer />
           <Link
             _target="_blank"
             href="https://github.com/Daniel-Slattery"
-            path={path}
             display="inline-flex"
             alignItems="center"
             style={{ gap: 4 }}
