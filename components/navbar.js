@@ -9,6 +9,7 @@ import {
   Spacer
 } from '@chakra-ui/react'
 import Logo from './logo'
+import ThemeToggleButton from './theme-toggle-button'
 import { IoLogoGithub } from 'react-icons/io5'
 
 const Navbar = props => {
@@ -54,6 +55,9 @@ const Navbar = props => {
             <IoLogoGithub />
             Source
           </Link>
+          <Spacer />
+          <ThemeToggleButton />
+          <Spacer />
         </Stack>
       </Flex>
     </Box>
