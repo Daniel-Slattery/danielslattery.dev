@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prod": "next start",
+    "dev:up": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up",
+    "prod:up": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up",
     "dev": "next dev",
     "build": "next build",
     "prettier": "prettier -write .",
@@ -21,7 +24,7 @@
     "react-icons": "^4.3.1"
   },
   "devDependencies": {
-    "eslint": "8.0.1",
+    "eslint": "^8.5.0",
     "eslint-config-next": "11.1.2",
     "prettier": "^2.5.1"
   }
