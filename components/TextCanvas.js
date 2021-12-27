@@ -1,50 +1,129 @@
-import * as THREE from 'three';
-import { useRef, useEffect } from 'react';
-import useTextCanvas from './useTextCanvas';
+import { useState, useEffect, useRef, useCallback } from 'react'
+import * as THREE from 'three'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import { loadGLTFModel } from '../lib/model'
+import { TextSpinner, TextContainer } from './TextCanvasLoader'
 
+function easeOutCirc(x) {
+  return Math.sqrt(1 - Math.pow(x - 1, 4))
+}
 
 const TextCanvas = () => {
+  const refContainer = useRef()
+  const [loading, setLoading] = useState(true)
+  const [renderer, setRenderer] = useState()
+  const [_camera, setCamera] = useState()
+  const [target] = useState(new THREE.Vector3(-0.5, 1.2, 0))
+  const [initialCameraPosition] = useState(
+    new THREE.Vector3(
+      20 * Math.sin(0.2 * Math.PI),
+      10,
+      20 * Math.cos(0.2 * Math.PI)
+    )
+  )
+  const [scene] = useState(new THREE.Scene())
+  const [_controls, setControls] = useState()
 
-const canvasRef = useRef()
+  const handleWindowResize = useCallback(() => {
+    const { current: container } = refContainer
+    if (container && renderer) {
+      const scW = container.clientWidth
+      const scH = container.clientHeight
 
-useEffect(() => {
-  const canvasHeight = window.innerHeight/2;
-  const canvasWidth = window.innerWidth/2;
+      renderer.setSize(scW, scH)
+    }
+  }, [renderer])
 
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(
-      75,
-      canvasWidth / canvasHeight,
-      0.1,
-      1000
-    );
+  /* eslint-disable react-hooks/exhaustive-deps */
+  useEffect(() => {
+    const { current: container } = refContainer
+    if (container && !renderer) {
+      const scW = container.clientWidth
+      const scH = container.clientHeight
 
-    const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current });
+      const renderer = new THREE.WebGLRenderer({
+        antialias: true,
+        alpha: true
+      })
+      renderer.setPixelRatio(window.devicePixelRatio)
+      renderer.setSize(scW, scH)
+      renderer.outputEncoding = THREE.sRGBEncoding
+      container.appendChild(renderer.domElement)
+      setRenderer(renderer)
 
-    renderer.setSize(canvasWidth, canvasHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
+      // 640 -> 240
+      // 8   -> 6
+      const scale = scH * 0.005 + 4.8
+      const camera = new THREE.OrthographicCamera(
+        -scale,
+        scale,
+        scale,
+        -scale,
+        0.01,
+        50000
+      )
+      camera.position.copy(initialCameraPosition)
+      camera.lookAt(target)
+      setCamera(camera)
 
-    console.log(scene.children);
-    const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
-    console.log(scene.children);
-    camera.position.z = 3;
+      const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
+      scene.add(ambientLight)
 
-    renderer.render(scene, camera);
-    // const { renderer } = useTextCanvas(canvasRef.current)
+      const controls = new OrbitControls(camera, renderer.domElement)
+      controls.autoRotate = true
+      controls.target = target
+      setControls(controls)
 
-    // Cleanup on unmount, otherwise stuff will linger in GPU
+      loadGLTFModel(scene, '/scene.glb', {
+        receiveShadow: false,
+        castShadow: false
+      }).then(() => {
+        animate()
+        setLoading(false)
+      })
+
+      let req = null
+      let frame = 0
+      const animate = () => {
+        req = requestAnimationFrame(animate)
+
+        frame = frame <= 100 ? frame + 1 : frame
+
+        if (frame <= 100) {
+          const p = initialCameraPosition
+          const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20
+
+          camera.position.y = 10
+          camera.position.x =
+            p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed)
+          camera.position.z =
+            p.z * Math.cos(rotSpeed) - p.x * Math.sin(rotSpeed)
+          camera.lookAt(target)
+        } else {
+          controls.update()
+        }
+
+        renderer.render(scene, camera)
+      }
+
+      return () => {
+        console.log('unmount')
+        cancelAnimationFrame(req)
+        renderer.dispose()
+      }
+    }
+  }, [])
+
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowResize, false)
     return () => {
-      renderer.forceContextLoss();
-      renderer.dispose();
-      cube.geometry.dispose();
-      cube.material.dispose();
-    };
-  }, []);
+      window.removeEventListener('resize', handleWindowResize, false)
+    }
+  }, [renderer, handleWindowResize])
 
-  return <canvas ref={canvasRef} />;
+  return (
+    <TextContainer ref={refContainer}>{loading && <TextSpinner />}</TextContainer>
+  )
 }
 
 export default TextCanvas
