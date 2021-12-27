@@ -1,9 +1,16 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 import { Box, Container, Flex, Heading } from '@chakra-ui/react'
 import Navbar from '../navbar'
-import TextCanvas from '../TextCanvas'
+import TextCanvasLoader from '../TextCanvas'
 
-const Main = () => {
+
+const TextCanvas = dynamic(() => import('../TextCanvas'), {
+  ssr: false,
+  loading: () => <TextCanvasLoader />
+})
+
+const Main = ({children}) => {
   return (
     <Flex as="main" pb={8} direction='column'>
       <Head>
@@ -12,8 +19,8 @@ const Main = () => {
       </Head>
       <Navbar  />
       <Flex h={400} align="center" justify="center" bg="lightblue" m={100}>
-        <Heading>3D Content Place Holder</Heading>
         <TextCanvas />
+        {children}
       </Flex>
 
     </Flex>
