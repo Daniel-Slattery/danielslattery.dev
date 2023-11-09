@@ -16,7 +16,7 @@ const Main = ({ children }) => {
         <title>Daniel Slattery - Homepage</title>
       </Head>
       <Navbar />
-      <Flex h={500} align="center" justify="center" bg="white" mt={10} mb={10}>
+      <Flex h={700} align="center" justify="center" bg="white" mt={10} mb={10}>
         <LaptopScene />
         {children}
       </Flex>
