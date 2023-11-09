@@ -25,12 +25,20 @@ export default function Home() {
       <Box>
         <Heading as="h3">Work</Heading>
         <p>
-          Tempor nostrud magna excepteur ea excepteur amet ea incididunt aliqua
-          cupidatat ut ad. Non laborum sit ipsum enim commodo. Consequat magna
-          ex proident eu laborum. Adipisicing et in id velit aliqua ipsum culpa
-          ut excepteur voluptate anim et. Culpa est adipisicing sint incididunt
-          cillum consectetur culpa exercitation excepteur nisi ad aliqua elit
-          aliqua.
+          Greetings from London! I am an enterprising Front-End Developer
+          working with a premier UK retail brand, where I bring complex digital
+          experiences to life. My professional journey is quite unique; it began
+          in the intricate world of biomedical engineering. This initial career
+          honed my analytical skills and introduced me to the transformative
+          power of technology in solving real-world problems. It wasn't long
+          before my fascination with automating trading strategies led me down
+          the path of coding—a path that revealed my passion for the dynamic
+          React and Next.js ecosystems. Today, I combine my background in
+          engineering with a deep expertise in web development to deliver
+          innovative, user-centered solutions. My mission is to create seamless,
+          intuitive, and scalable web applications that enhance user interaction
+          and engagement, whilst continuously exploring the frontiers of digital
+          innovation.
         </p>
       </Box>
     </Container>

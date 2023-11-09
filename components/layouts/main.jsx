@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic'
 import { Flex } from '@chakra-ui/react'
 import Navbar from '../navbar'
 
-const ExperienceNoSSR = dynamic(() => import('../LaptopScene'), {
+const LaptopScene = dynamic(() => import('../LaptopScene'), {
   ssr: false,
   loading: () => <div>...Loading</div>
 })
@@ -16,8 +16,8 @@ const Main = ({ children }) => {
         <title>Daniel Slattery - Homepage</title>
       </Head>
       <Navbar />
-      <Flex h={400} align="center" justify="center" bg="lightblue" m={100}>
-        <ExperienceNoSSR />
+      <Flex h={500} align="center" justify="center" bg="white" mt={10} mb={10}>
+        <LaptopScene />
         {children}
       </Flex>
     </Flex>

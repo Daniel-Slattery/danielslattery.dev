@@ -7,7 +7,8 @@ import {
   PresentationControls,
   ContactShadows,
   Html,
-  Text
+  Text,
+  PerspectiveCamera
 } from '@react-three/drei'
 
 const LaptopScene = () => {
@@ -15,10 +16,10 @@ const LaptopScene = () => {
   return (
     <>
       <Environment preset="city" />
-      <color attach="background" args={['#241a1a']} />
+      <color attach="background" args={['#ffffff']} />
       <PresentationControls
         global
-        rotation={[0.13, 0.1, 0]}
+        rotation={[0.18, 0.6, 0]}
         polar={[-0.4, 0.2]}
         azimuth={[-1, 0.75]}
         config={{ mass: 2, tension: 400 }}
@@ -41,7 +42,7 @@ const LaptopScene = () => {
               position={[0, 1.56, -1.4]}
               rotation-x={-0.256}
             >
-              <iframe src="https://www.wikipedia.org/"></iframe>
+              <iframe src="https://daniel-slattery.github.io/Resume-UX"></iframe>
             </Html>
           </primitive>
           <Text
@@ -64,6 +65,7 @@ const LaptopScene = () => {
 const LaptopSceneCanvas = () => {
   return (
     <Canvas>
+      <PerspectiveCamera makeDefault position={[0, 0, 5]} fov={40} />
       <Suspense fallback={null}>
         <LaptopScene />
       </Suspense>
