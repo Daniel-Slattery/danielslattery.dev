@@ -29,7 +29,6 @@ const Logo = () => {
           />
           <Text
           >
-            Daniel Slattery
           </Text>
         </LogoBoxWrapper>
   )
