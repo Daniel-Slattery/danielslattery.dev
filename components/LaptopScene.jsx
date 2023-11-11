@@ -15,12 +15,21 @@ const LaptopScene = () => {
   const [targetRotation, setTargetRotation] = useState([0, 0, 0])
   const [rotationIntensity, setRotationIntensity] = useState(0.4)
   const [position, setPosition] = useState([0, -1.2, 0])
+  const [zoomed, setZoomed] = useState(false)
   const laptopRef = useRef()
 
   const handleClick = () => {
-    setTargetRotation([0.2, -0.5, 0.1])
-    setRotationIntensity(0.05)
-    setPosition([-2, -1.2, 3])
+    if (zoomed) {
+      setTargetRotation([0, 0, 0])
+      setRotationIntensity(0.4)
+      setPosition([0, -1.2, 0])
+      setZoomed(false)
+    } else {
+      setTargetRotation([0.2, -0.5, 0.1])
+      setRotationIntensity(0.05)
+      setPosition([-2, -1.3, 3])
+      setZoomed(true)
+    }
   }
 
   const Laptop = () => {
@@ -61,7 +70,7 @@ const LaptopScene = () => {
               width={2.5}
               height={1.65}
               intensity={65}
-              color={'#ff6900'}
+              color={'#0099ff'}
               rotation={[-0.1, Math.PI, 0]}
               position={[0, 0.55, -1.15]}
             />
@@ -87,6 +96,7 @@ const LaptopScene = () => {
               rotation-y={-1.25}
               maxWidth={2}
               textAlign="center"
+              color="#16679d"
             >
               Daniel Slattery
             </Text>

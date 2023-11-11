@@ -25,12 +25,12 @@ const Navbar = () => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <Link href="#">Projects</Link>
+          <Link href="/projects">Projects</Link>
           <Spacer />
           <Link href="#">Posts</Link>
           <Spacer />
           <Link
-            _target="_blank"
+            target="_blank"
             href="https://github.com/Daniel-Slattery"
             display="inline-flex"
             alignItems="center"
