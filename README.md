@@ -2,7 +2,7 @@
 Building a personal portfolio site.
 
 Set up a continuous deployment of Docker container on Google Cloud Run.
-- [My Portfolio Site](https://portfolio-site-eejlz7vswq-nw.a.run.app/)
+- [danielslattery.dev](https://danielslattery.dev/)
 
 ## Tech Stack
 - [Next.js](https://nextjs.org/)
