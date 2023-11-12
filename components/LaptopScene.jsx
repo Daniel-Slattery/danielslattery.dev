@@ -98,7 +98,7 @@ const LaptopScene = () => {
               textAlign="center"
               color="#16679d"
             >
-              Daniel Slatz
+              Dan Slatz
             </Text>
           </Float>
         </PresentationControls>
