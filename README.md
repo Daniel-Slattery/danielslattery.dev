@@ -10,7 +10,6 @@ Set up a continuous deployment of Docker container on Google Cloud Run.
 - [Three JS](https://threejs.org/)
 
 
-
 ## To Run a Local Copy
 
 First, run the development server:
