@@ -1,4 +1,4 @@
-import { Text, Image, Link } from '@chakra-ui/react'
+import { Image, Link } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 
 const LogoBoxWrapper = styled.span`
