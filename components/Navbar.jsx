@@ -1,51 +1,33 @@
-import { Box, Link, Stack, Flex, Spacer } from '@chakra-ui/react'
+import React from 'react'
+import Link from 'next/link'
 import Logo from './Logo'
 import ThemeToggleButton from './ThemeToggleButton'
 import { IoLogoGithub } from 'react-icons/io5'
 
 const Navbar = () => {
   return (
-    <Box
-      position="fixed"
-      p={2}
-      as="nav"
-      w="100%"
-      css={{ backdropFilter: 'blur(10px)' }}
-      zIndex={1}
-    >
-      <Flex>
-        <Spacer />
-        <Logo />
-        <Spacer />
-        <Stack
-          direction={{ base: 'column', md: 'row' }}
-          display={{ base: 'none', md: 'flex' }}
-          width={{ base: '50%', md: '50%' }}
-          alignItems="center"
-          flexGrow={1}
-          mt={{ base: 4, md: 0 }}
+    <nav className="fixed p-2 w-full backdrop-blur-md z-10">
+      <div className="flex justify-evenly">
+        <div className="inline-flex items-center mr-6">
+          <Logo />
+        </div>
+        <Link href="/projects" className="inline-flex items-center mr-6 hover:underline">
+          Projects
+        </Link>
+        <Link href="/posts" className="inline-flex items-center mr-6 hover:underline">
+          Posts
+        </Link>
+        <Link
+          href="https://github.com/Daniel-Slattery"
+          passHref
+          className="inline-flex items-center gap-4 pl-2 mr-6 hover:underline"
         >
-          <Link href="/projects">Projects</Link>
-          <Spacer />
-          <Link href="/posts">Posts</Link>
-          <Spacer />
-          <Link
-            target="_blank"
-            href="https://github.com/Daniel-Slattery"
-            display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
-            pl={2}
-          >
-            <IoLogoGithub />
-            Source
-          </Link>
-          <Spacer />
-          <ThemeToggleButton />
-          <Spacer />
-        </Stack>
-      </Flex>
-    </Box>
+          <IoLogoGithub />
+          Source
+        </Link>
+        <ThemeToggleButton />
+      </div>
+    </nav>
   )
 }
 

@@ -13,7 +13,9 @@ module.exports = {
         'custom-blue': '#243c5a',
         // Add more custom colors here
       },
-      // Add other theme extensions here
+      rotate: {
+        '20': '20deg', // This adds a 'rotate-20' utility
+      },
     },
   },
   variants: {

@@ -9,3 +9,7 @@
   border-radius: 20px;
   background: black;
 }
+
+.hover\:rotate-20:hover {
+  @apply rotate-20;
+}
