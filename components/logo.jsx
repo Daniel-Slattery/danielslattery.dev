@@ -1,4 +1,4 @@
-import { Text, Image } from '@chakra-ui/react'
+import { Text, Image, Link } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 
 const LogoBoxWrapper = styled.span`
@@ -20,6 +20,7 @@ const Logo = () => {
 
   return (
         <LogoBoxWrapper>
+          <Link href="/">
           <Image
             src="/images/android-chrome-192x192.png"
             width={30}
@@ -27,9 +28,7 @@ const Logo = () => {
             alt="logo"
             mr={2}
           />
-          <Text
-          >
-          </Text>
+          </Link>
         </LogoBoxWrapper>
   )
 }

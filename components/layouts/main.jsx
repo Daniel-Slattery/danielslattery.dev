@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { Flex } from '@chakra-ui/react'
-import Navbar from '../navbar'
+import Navbar from '../Navbar'
 
 const Main = ({ children }) => {
   return (

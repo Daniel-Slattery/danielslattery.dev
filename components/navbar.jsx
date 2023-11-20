@@ -1,6 +1,6 @@
 import { Box, Link, Stack, Flex, Spacer } from '@chakra-ui/react'
-import Logo from './logo'
-import ThemeToggleButton from './theme-toggle-button'
+import Logo from './Logo'
+import ThemeToggleButton from './Theme-toggle-button'
 import { IoLogoGithub } from 'react-icons/io5'
 
 const Navbar = () => {
@@ -27,7 +27,7 @@ const Navbar = () => {
         >
           <Link href="/projects">Projects</Link>
           <Spacer />
-          <Link href="#">Posts</Link>
+          <Link href="/posts">Posts</Link>
           <Spacer />
           <Link
             target="_blank"
