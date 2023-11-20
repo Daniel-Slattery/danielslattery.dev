@@ -1,17 +1,22 @@
-import { IconButton, useColorMode, useColorModeValue } from '@chakra-ui/react'
-import { SunIcon, MoonIcon } from '@chakra-ui/icons'
+import React from 'react';
+import { SunIcon, MoonIcon } from '@heroicons/react/20/solid'; // or any other icon library you prefer
 
 const ThemeToggleButton = () => {
-  const { toggleColorMode } = useColorMode()
+  const [darkMode, setDarkMode] = React.useState(false);
+
+  const toggleColorMode = () => {
+    setDarkMode(!darkMode);
+  };
 
   return (
-    <IconButton
-      aria-label="Toggle theme"
-      colorScheme={useColorModeValue('purple', 'orange')}
-      icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
+    <button
       onClick={toggleColorMode}
-    ></IconButton>
-  )
-}
+      className={`p-2 rounded ${darkMode ? 'bg-orange-400' : 'bg-purple-500'}`}
+      aria-label="Toggle theme"
+    >
+      {darkMode ? <SunIcon className="h-5 w-5 text-white" /> : <MoonIcon className="h-5 w-5 text-white" />}
+    </button>
+  );
+};
 
-export default ThemeToggleButton
+export default ThemeToggleButton;

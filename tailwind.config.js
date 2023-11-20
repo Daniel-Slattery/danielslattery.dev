@@ -24,5 +24,5 @@ module.exports = {
   plugins: [
     // Add any Tailwind plugins you'd like to use here
   ],
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
 };

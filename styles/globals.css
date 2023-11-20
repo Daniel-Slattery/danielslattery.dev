@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Define your CSS variables */
+:root {
+  --my-fonts-body: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  --my-colors-body-text: #1A202C;
+  --my-colors-body-bg: #fff;
+  --my-transition-duration-normal: 0.2s;
+  --my-lineHeights-base: 1.5;
+}
+
+/* Apply these styles globally */
+body {
+  font-family: var(--my-fonts-body);
+  color: var(--my-colors-body-text);
+  background: var(--my-colors-body-bg);
+  transition-property: background-color;
+  transition-duration: var(--my-transition-duration-normal);
+  line-height: var(--my-lineHeights-base);
+}
+
 .html-screen iframe {
   width: 1024px;
   height: 670px;

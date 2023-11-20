@@ -1,8 +1,9 @@
 import dynamic from 'next/dynamic'
+import CustomLoader from '../components/CustomLoader'
 
 const LaptopScene = dynamic(() => import('../components/LaptopScene'), {
   ssr: false,
-  loading: () => <div>...Loading</div>
+  loading: () => <CustomLoader />
 })
 
 const Home = () => <LaptopScene />
