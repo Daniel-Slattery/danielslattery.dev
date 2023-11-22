@@ -1,0 +1,28 @@
+# Dependency directories
+node_modules
+jspm_packages
+
+# Build output
+dist
+.next
+out
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Directory for editor configurations
+.idea
+.vscode
+
+# Environment files
+.env*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Misc
+.DS_Store
+Thumbs.db

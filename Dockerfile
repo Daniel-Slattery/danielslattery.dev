@@ -1,5 +1,5 @@
 # Use a Node.js version compatible with your next package requirements
-FROM node:18-alpine
+FROM node:20-alpine
 
 # Create app directory and set permissions
 RUN mkdir -p /home/app/ && chown -R node:node /home/app
@@ -12,7 +12,7 @@ COPY --chown=node:node . .
 USER node
 
 # Install app dependencies using npm
-RUN npm ci --only=production
+RUN npm ci
 
 # Build the application
 RUN npm run build
