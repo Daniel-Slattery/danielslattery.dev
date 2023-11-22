@@ -1,38 +1,50 @@
-## Portfolio Site
-Building a personal portfolio site.
+# danielslattery.dev
 
-Set up a continuous deployment of Docker container on Google Cloud Run.
-- [danielslattery.dev](https://danielslattery.dev/)
+This is my personal portfolio website (still under construction), showcasing my projects and skills. It's built using a modern tech stack and deployed on Google Cloud Platform.
+
+Visit the live site: [danielslattery.dev](https://danielslattery.dev/)
 
 ## Tech Stack
-- [Next.js](https://nextjs.org/)
-- [Chakra UI](https://chakra-ui.com/)
-- [Three JS](https://threejs.org/)
 
+- [Next.js](https://nextjs.org/) - The React framework for production.
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+- [ThreeJS](https://threejs.org/) - JavaScript 3D library.
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework.
+- [DaisyUI](https://daisyui.com/) - Tailwind CSS component library.
+- [Google Cloud Platform](https://cloud.google.com/) - For hosting and deployment.
 
-## To Run a Local Copy
+## Features
 
-First, run the development server:
+- Continuous deployment using Docker containers on Google Cloud Run.
+- Interactive 3D elements with ThreeJS.
+- Responsive design using Tailwind CSS and DaisyUI.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Running a Local Copy
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To run a local copy of this site, follow these steps:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+1. Clone the repository:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+   ```bash
+   git clone https://github.com/Daniel-Slattery/danielslattery.dev.git
+   ```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+2. Navigate to the project directory:
 
-## Learn More
+   ```bash
+   cd danielslattery.dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. Install the dependencies:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
