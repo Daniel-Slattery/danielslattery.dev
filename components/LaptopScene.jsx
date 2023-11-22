@@ -56,7 +56,6 @@ const LaptopScene = () => {
     return (
       <>
         <Environment preset="city" />
-        <color attach="background" args={['white']} />
         <PresentationControls
           global
           rotation={[0.18, 0.6, 0]}

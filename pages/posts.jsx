@@ -1,9 +1,9 @@
 const Posts = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
-      <h1 className="text-4xl font-bold text-gray-800 mb-6">Posts</h1>
-      <div className="bg-white shadow-xl rounded-lg p-6 md:w-2/3 lg:w-1/2">
-        <p className="text-lg text-gray-800">
+    <div className="flex flex-col items-center justify-center min-h-screen p-4">
+      <h1 className="text-4xl font-bold mb-6">Posts</h1>
+      <div className="bg-secondary shadow-xl rounded-lg p-6 md:w-2/3 lg:w-1/2">
+        <p className="text-lg">
           🚧{' '}
           <strong className="font-bold">Whoops, Still Tinkering Here!</strong>{' '}
           🛠️

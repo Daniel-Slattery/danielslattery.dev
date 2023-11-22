@@ -1,8 +1,8 @@
 module.exports = {
   content: [
     // Paths to your files where Tailwind should look for classes to be included in the production build.
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}'
     // Add more paths here if you have additional directories with components or templates.
   ],
   theme: {
@@ -10,19 +10,53 @@ module.exports = {
       // Extend the default Tailwind theme here
       // For example, you can add custom colors, spacing, etc.
       colors: {
-        'custom-blue': '#243c5a',
+        'custom-blue': '#243c5a'
         // Add more custom colors here
       },
       rotate: {
-        '20': '20deg', // This adds a 'rotate-20' utility
-      },
-    },
+        20: '20deg' // This adds a 'rotate-20' utility
+      }
+    }
   },
   variants: {
     // Configure the variants here
   },
-  plugins: [
-    // Add any Tailwind plugins you'd like to use here
-  ],
-  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-};
+  daisyui: {
+    themes: [
+      "cupcake",
+      "cyberpunk",
+      "emerald",
+      "bumblebee",
+      "corporate",
+      "halloween",
+      "light",
+      "dark",
+      "synthwave",
+      "retro",
+      "valentine",
+      "garden",
+      "forest",
+      "aqua",
+      "lofi",
+      "pastel",
+      "fantasy",
+      "wireframe",
+      "black",
+      "luxury",
+      "dracula",
+      "cmyk",
+      "autumn",
+      "business",
+      "acid",
+      "lemonade",
+      "night",
+      "coffee",
+      "winter",
+      "dim",
+      "nord",
+      "sunset",
+    ],
+  },
+  plugins: [require('daisyui')],
+  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}']
+}
