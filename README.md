@@ -6,6 +6,15 @@ Visit the live site: [danielslattery.dev](https://danielslattery.dev/)
 
 ## Tech Stack
 
+<div align="center">
+  <img alt="NextJS logo" width="40px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0WknlAxF3hYDbrIM1StGLIDmf_9336yHjL-9i5lc&usqp=CAE&s" />
+  <img alt="react logo" width="40px" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" />
+  <img alt="threeJS logo" width="40px" src="public/images/threeJS_Logo.png"/>
+  <img alt="tailwind logo" width="45px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZqBXG5DwJrCy9VOGyfnOkbrLePhtdOuQg6w&usqp=CAU"/>
+  <img alt="daisyUI logo" height="40px" src="https://daisyui.com/favicon.ico"/>
+  <img alt="daisyUI logo" height="40px" src="/Users/daniel.slattery/github/portfolio-site/public/images/gcp-logo.png"/>
+</div>
+
 - [Next.js](https://nextjs.org/) - The React framework for production.
 - [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
 - [ThreeJS](https://threejs.org/) - JavaScript 3D library.
