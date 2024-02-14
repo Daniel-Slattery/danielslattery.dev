@@ -1,4 +1,4 @@
-# danielslattery.dev
+# [danielslattery.dev](https://danielslattery.dev/)
 
 This is my personal portfolio website (still under construction), showcasing my projects and skills. It's built using a modern tech stack and deployed on Google Cloud Platform.
 
