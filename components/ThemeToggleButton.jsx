@@ -3,7 +3,7 @@ const ThemeToggleButton = () => {
     <label className="cursor-pointer grid place-items-center">
       <input
         type="checkbox"
-        value="night"
+        value="dracula"
         className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"
       />
       <svg
