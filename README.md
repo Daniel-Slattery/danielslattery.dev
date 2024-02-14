@@ -12,6 +12,7 @@ Visit the live site: [danielslattery.dev](https://danielslattery.dev/)
   <img alt="threeJS logo" width="40px" src="public/images/threeJS_Logo.png"/>
   <img alt="tailwind logo" width="45px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZqBXG5DwJrCy9VOGyfnOkbrLePhtdOuQg6w&usqp=CAU"/>
   <img alt="daisyUI logo" height="40px" src="https://daisyui.com/favicon.ico"/>
+  <img alt="docker logo" height="40px" src="https://avatars.githubusercontent.com/u/5429470?s=280&v=4"/>
   <img alt="daisyUI logo" height="40px" src="/Users/daniel.slattery/github/portfolio-site/public/images/gcp-logo.png"/>
 </div>
 
@@ -20,6 +21,7 @@ Visit the live site: [danielslattery.dev](https://danielslattery.dev/)
 - [ThreeJS](https://threejs.org/) - JavaScript 3D library.
 - [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework.
 - [DaisyUI](https://daisyui.com/) - Tailwind CSS component library.
+- [Docker](https://www.docker.com/) - Platform for developing, shipping, and running applications.
 - [Google Cloud Platform](https://cloud.google.com/) - For hosting and deployment.
 
 ## Features
