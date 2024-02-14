@@ -13,7 +13,7 @@ Visit the live site: [danielslattery.dev](https://danielslattery.dev/)
   <img alt="tailwind logo" width="45px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZqBXG5DwJrCy9VOGyfnOkbrLePhtdOuQg6w&usqp=CAU"/>
   <img alt="daisyUI logo" height="40px" src="https://daisyui.com/favicon.ico"/>
   <img alt="docker logo" height="40px" src="https://avatars.githubusercontent.com/u/5429470?s=280&v=4"/>
-  <img alt="daisyUI logo" height="40px" src="/Users/daniel.slattery/github/portfolio-site/public/images/gcp-logo.png"/>
+  <img alt="google_cloud logo" height="40px" src="public/images/gcp-logo.png"/>
 </div>
 
 - [Next.js](https://nextjs.org/) - The React framework for production.
