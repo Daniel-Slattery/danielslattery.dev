@@ -22,7 +22,7 @@ module.exports = {
     // Configure the variants here
   },
   daisyui: {
-    themes: true,
+    themes: ['light', 'night'],
     darkTheme: 'night',
     base: true, // applies background color and foreground color for root element by default
     styled: true, // include daisyUI colors and design decisions for all components
