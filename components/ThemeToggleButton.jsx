@@ -1,36 +1,30 @@
 import React, { useEffect, useState } from 'react'
 
 const ThemeToggleButton = () => {
-  const [isDarkTheme, setIsDarkTheme] = useState(false)
+  const [theme, setTheme] = useState('light'); // Default theme
 
   useEffect(() => {
-    const prefersDark = window.matchMedia(
-      '(prefers-color-scheme: dark)'
-    ).matches
-
-    setIsDarkTheme(prefersDark)
-
-    document.documentElement.setAttribute(
-      'data-theme',
-      prefersDark ? 'dark' : 'light'
-    )
-  }, [])
+    const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    setTheme(savedTheme);
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  }, []);
 
   const toggleTheme = () => {
-    const newTheme = !isDarkTheme ? 'dark' : 'light'
-    document.documentElement.setAttribute('data-theme', newTheme)
-    setIsDarkTheme(!isDarkTheme)
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+    document.documentElement.setAttribute('data-theme', newTheme);
+  };
 
-    // Persist the theme preference in localStorage
-    localStorage.setItem('theme', newTheme)
-  }
+
   return (
     <label className="cursor-pointer grid place-items-center">
       <input
         type="checkbox"
-        checked={isDarkTheme}
+        checked={theme === 'dark'}
         onChange={toggleTheme}
         className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"
+        value={'night'}
       />
       <svg
         className="col-start-1 row-start-1 stroke-base-100 fill-base-100"
